@@ -1,0 +1,416 @@
+*, ::before, ::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  ;
+  min-width: 222px;
+}
+
+body {
+  background-color: white;
+  color: black;
+  font-family: Roboto Condensed, Arial, sans-serif;
+  width: 100%;
+  height: 100%;
+  min-width: 222px;
+}
+
+/* heading css*/
+#header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  box-shadow: 5px 0 20px rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(10px);
+  z-index: 2;
+  padding: 0 1rem;
+
+}
+
+#header {
+  animation-name: drop;
+  animation-duration: 2s;
+}
+
+@keyframes drop {
+  0% {
+    margin-top: -100px;
+  } 100% {
+    margin-top: 0;
+  }
+}
+
+#header img{
+  width: 50px;
+}
+
+/*all sections settings*/
+#home, #specifications, #review-input, #reference{
+  padding-top: 4rem;
+  width: 80%;
+  margin: 0 auto;
+  min-width: 222px;
+}
+
+
+hr {
+  width: 80%;
+  margin: 2rem auto;
+  opacity: 0.3;
+  z-index: -1;
+}
+
+/*section home*/
+.iphone-16-definition {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.iphone-16-definition p{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#video {
+  height: 90dvh;
+  width: 100%;
+  animation: slide-right 3s;
+}
+@keyframes slide-right{
+  0% {
+    transform: translate(-20rem);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+
+#title{
+  font-size: 2.5rem;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  font-family: bungee spice, sans-serif;
+  padding: 10px;
+  margin-bottom: 20px;
+  transition: all 0.2s;
+  background: linear-gradient(90deg, rgb(175, 212, 243),rgb(124, 179, 235),rgb(56, 75, 252));
+  animation-name: slide-left;
+  animation-duration: 3s;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#title a{
+  text-decoration: none;
+}
+
+@keyframes slide-left {
+  from { margin-left: 100px;}
+  to {
+    margin-left: 0;
+  }
+}
+
+#title:hover {
+  -webkit-text-fill-color: initial;
+  cursor: pointer;
+  text-shadow: 5px 5px 6px rgba(240, 209, 75, 0.6);
+}
+
+
+#definition {
+  font-size: 2rem;
+  text-align: center;
+  margin: 20px 0;
+  color: rgb(170, 170, 250);
+  font-family: Salsa, sans-serif;
+}
+
+.promotional-video {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 1rem;
+}
+
+#iphone-16 {
+  padding: 20px 15px;
+  font-size: 1rem;
+  letter-spacing: 2px;
+  line-height: 20px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.iphone-16-model-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 20px 0;
+}
+
+.iphone-16-model-container figcaption{
+  color: gray;
+  margin: -18px 0 0 0;
+  padding: 0;
+}
+
+#iphone-16-model {
+  width: 80%;
+  margin: 20px;
+}
+
+/*section specifications*/
+.specification-header, #finish, #capacity, #size_and_weight, #display, #resistance, #chip,#camera,#video-recording, #reference-container{
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 1rem;
+  padding: 20px 0;
+}
+
+.top-rem {
+  margin-top: 3rem;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: rgb(92, 91, 91);
+}
+
+.right-container img{
+  width: 50%;
+  margin-bottom: 1.5rem
+}
+
+.border-left {
+  border-left: 2px solid rgba(125, 125, 125, 0.3);
+}
+
+.margin-bottom {
+  margin-bottom: 2rem;
+}
+
+.bold {
+  font-weight: bold;
+}
+
+.big-font {
+  font-size: 2rem;
+}
+
+.relative {
+  position: relative;
+  z-index: -1;
+}
+
+.absolute-height {
+  position: absolute;
+  font-size: 0.8rem;
+  color: gray;
+  top: 0;
+  left: 31%;
+}
+
+.absolute-depth {
+    position: absolute;
+    font-size: 0.8rem;
+    color: gray;
+    bottom: 35%;
+    right: 25%;
+}
+
+.absolute-width {
+  position: absolute;
+  font-size: 0.8rem;
+  color: gray;
+  top: -10%;
+  right: 20%;
+}
+
+#display-size {
+  width: auto;
+}
+
+.start-padding {
+  text-align: start;
+  margin-left: 1rem;
+  line-height:2rem;
+}
+
+.start {
+  text-align: start;
+  margin-left: 1rem;
+}
+
+.border-bottom {
+  border-bottom: 2px solid rgba(125,125,125,0.6);
+  padding-bottom: 1rem;
+}
+
+.chip-right {
+  display: flex;
+  
+  gap: 2rem;
+}
+
+/*section review*/
+#review-input {
+  background-image: url(https://steamuserimages-a.akamaihd.net/ugc/914668728147110451/8567B746F07301A6CE5F4C483A19306E528BFE81/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+}
+
+#review-input {
+  margin: 20px auto;
+  padding-bottom: 2rem 0;
+}
+
+#form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+fieldset {
+  padding: 30px;
+  border: 4px solid rgba(255, 255, 255, 0.6);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  margin: 0;
+  margin-bottom: 3rem;
+  width: 50%;
+}
+
+#to-review{
+  font-size: 1.5rem;
+  font-family: Salsa, Arial;
+  color: turquoise;
+  text-shadow: 3px 3px 2px rgba(82, 129, 231, 0.4);
+  text-align: start;
+  background: transparent;
+  padding: 0.5rem 1rem;
+  border-radius: 20px 5px 20px 5px;
+  backdrop-filter: blur(10px);
+  border: 3px dashed white;
+  transform: rotate(-7deg);
+  z-index: 1;
+  position: absolute;
+  top: -7%;
+  left: 18%;
+}
+
+#email, #text-area, #name, #age {
+  display: block;
+  padding: 10px;
+  margin: 0;
+  border-radius: 7px;
+  outline: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: bold;
+  width: 100%;
+  border: none;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+#text-area {
+  max-height: 200px;
+  min-height: 50px;
+  height: 100px;
+}
+
+
+#text-area::-webkit-scrollbar {
+  display: none;
+}
+
+::placeholder {
+  font-size: 1rem;
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.4);  
+  color: turquoise;
+}
+
+input:focus::placeholder, #text-area:focus::placeholder {
+  color: transparent;
+  text-shadow: none;
+  transition: all 0.2s;
+}
+
+
+#submit-button {
+  padding: 10px 15px;
+  border-radius: 20px;
+  border: none;
+  color: white;
+  background-color: dodgerblue;
+  font-size: 20px;
+  font-weight: bold;
+  
+}
+
+address {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: gray;
+  font-size: 1rem;
+  padding: 1rem 0;
+  background-color: rgb(154, 204, 248);
+  line-height: 20px
+  ;
+}
+
+hr:last-of-type {
+  margin: 0;
+}
+
+/*media queries*/
+@media (width < 787px) {
+  .promotional-video,.specification-header, #finish, #capacity, #size_and_weight, #display, #resistance, #chip,#camera,#video-recording,#reference-container{
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .border-left {
+    border-left: none;
+  }
+  
+  hr {
+    display: none;
+  }
+
+  #nav-bar {
+    display: none;
+  }
+
+}
+
+@media (width > 788px) {
+  .border-bottom {
+    border-bottom: none;
+  }
+}
+
